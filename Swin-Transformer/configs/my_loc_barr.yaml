@@ -1,0 +1,17 @@
+MODEL:
+  TYPE: loc_net
+#  NAME: swin_tiny_patch4_window7_224
+  NAME: swin_tiny_ratio_exp_1_freeze_with_loc_weighted
+  DROP_PATH_RATE: 0.2
+  SWIN:
+    EMBED_DIM: 96
+    DEPTHS: [ 2, 2, 6, 2 ]
+    NUM_HEADS: [ 3, 6, 12, 24 ]
+    WINDOW_SIZE: 7
+    IN_CHANS: 5
+
+DATA:
+  DATASET: BARR
+
+#TRANSU:
+#  CLASS_NUM: 2

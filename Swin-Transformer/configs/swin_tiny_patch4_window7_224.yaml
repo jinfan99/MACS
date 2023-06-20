@@ -1,0 +1,13 @@
+MODEL:
+  TYPE: swin
+#  NAME: swin_tiny_patch4_window7_224
+  NAME: ipcai_swin_tiny_ratio_exp_1_freeze_seed_42
+  DROP_PATH_RATE: 0.2
+  SWIN:
+    EMBED_DIM: 96
+    DEPTHS: [ 2, 2, 6, 2 ]
+    NUM_HEADS: [ 3, 6, 12, 24 ]
+    WINDOW_SIZE: 7
+  PRETRAINED: /home/jinfan/repos/Swin-Transformer/ipcai_output/ipcai_swin_tiny_ratio_exp_all_freeze/default/ckpt_epoch_299.pth
+
+SEED: 42
