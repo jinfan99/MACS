@@ -14,7 +14,7 @@ from timm.data.constants import IMAGENET_DEFAULT_MEAN, IMAGENET_DEFAULT_STD
 from timm.data import Mixup
 from timm.data import create_transform
 import sys
-from data.loc_barr import BARR
+# from data.loc_barr import BARR
 
 from .cached_image_folder import CachedImageFolder
 from .samplers import SubsetRandomSampler
@@ -118,8 +118,8 @@ def build_dataset(is_train, config):
         nb_classes = 2
     elif config.DATA.DATASET == 'imagenet22K':
         raise NotImplementedError("Imagenet-22K will come soon.")
-    elif config.DATA.DATASET == 'BARR':
-        dataset = BARR(num_frames=1, split=split, tmp_info=False)
+    # elif config.DATA.DATASET == 'BARR':
+    #     dataset = BARR(num_frames=1, split=split, tmp_info=False)
         nb_classes = 2
     else:
         raise NotImplementedError("We only support ImageNet Now.")
@@ -163,5 +163,10 @@ def build_transform(is_train, config):
             )
 
     t.append(transforms.ToTensor())
-    t.append(transforms.Normalize(IMAGENET_DEFAULT_MEAN, IMAGENET_DEFAULT_STD))
+    # t.append(transforms.Normalize(IMAGENET_DEFAULT_MEAN, IMAGENET_DEFAULT_STD))
+    macs_mean = (136.074 / 255, 74.512 / 255, 62.077 / 255)
+    macs_std = (69.016 / 255, 61.919 / 255, 56.320 / 255)
+    t.append(transforms.Normalize(macs_mean, macs_std))
+    print('using macs mean and std... ...')
+    
     return transforms.Compose(t)
