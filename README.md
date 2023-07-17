@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This is a reposiroty for the MACS dataset proposed in *Shifted-Windows Transformers for the Detection of Cerebral Aneurysms in Microsurgery* and the code base. The dataset can be downloaded from [here](https://rdr.ucl.ac.uk/articles/dataset/Microsurgical_Aneurysm_Clipping_Surgery_MACS_Dataset_with_image-level_aneurysm_presence_absence_annotations/23533731).
+This is a reposiroty for the MACS dataset proposed in *Shifted-Windows Transformers for the Detection of Cerebral Aneurysms in Microsurgery* and the code base. The dataset can be downloaded from [here](https://doi.org/10.5522/04/23533731).
 
 ## MACS Dataset
 
