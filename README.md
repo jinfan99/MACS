@@ -6,7 +6,7 @@ This is a reposiroty for the MACS dataset proposed in *Shifted-Windows Transform
 
 ## MACS Dataset
 
-The dataset has 16 folders `vid_*\` of frames extracted from 16 surgery videos respectively. Under each folder there are two folders `0\` including all Type-X (negative-aneurysm not present) frames and `1\` including all the Type-Y (positive-aneurysm present) frames.
+The dataset has 16 folders `vid_*/` of frames extracted from 16 surgery videos respectively. Under each folder there are two folders `0/` including all Type-X (negative-aneurysm not present) frames and `1/` including all the Type-Y (positive-aneurysm present) frames.
 
 As reported in the paper, we split the video frames to 4 folds to conduct cross validation experiment as:
 
@@ -18,7 +18,7 @@ As reported in the paper, we split the video frames to 4 folds to conduct cross 
 | `vid_19` | `vid_03` | `vid_12` | `vid_08` |
 
 
-There is also an `img_test\` folder which contains 15 test images use for the comparison between the AI model and humans.
+There is also an `img_test/` folder which contains 15 test images use for the comparison between the AI model and humans.
 
 ## MACSSwin-T
 
@@ -60,7 +60,7 @@ python -m torch.distributed.launch --nproc_per_node 1 --master_port 12345  main.
 
 The implementation of the MACSSwin-T model is based on the code base of [Video Swin Transformer](https://github.com/SwinTransformer/Video-Swin-Transformer). See [install.md](https://github.com/SwinTransformer/Video-Swin-Transformer/blob/master/docs/install.md) for a quick start. 
 
-You can use `cas_data\gen_vid_cas.py` to generate the dataset used to train the vidMACSSwin-T model as:
+You can use `cas_data/gen_vid_cas.py` to generate the dataset used to train the vidMACSSwin-T model as:
 
 ```
 python --cas_path <macs-path> --dest_path <desitmation_path>
