@@ -58,9 +58,7 @@ python -m torch.distributed.launch --nproc_per_node 1 --master_port 12345  main.
 
 ## vidMACSSwin-T
 
-The implementation of the MACSSwin-T model is based on the code base of [Video Swin Transformer](https://github.com/SwinTransformer/Video-Swin-Transformer). See [install.md
-
-](https://github.com/SwinTransformer/Video-Swin-Transformer/blob/master/docs/install.md) for a quick start. 
+The implementation of the MACSSwin-T model is based on the code base of [Video Swin Transformer](https://github.com/SwinTransformer/Video-Swin-Transformer). See [install.md](https://github.com/SwinTransformer/Video-Swin-Transformer/blob/master/docs/install.md) for a quick start. 
 
 You can use `cas_data\gen_vid_cas.py` to generate the dataset used to train the vidMACSSwin-T model as:
 
